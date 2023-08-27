@@ -16,38 +16,36 @@ Betty.vim is a Neovim plugin that takes your coding experience to the next level
 
 ### Prerequisites
 
-- Neovim 0.5 or Vim 
+- Neovim 0.5
 - [Betty](https://github.com/holbertonschool/Betty) style checker installed
 
 ### Using a Plugin Manager (Recommended)
 
-1. **Install a Plugin Manager:** If you haven't already, set up a plugin manager like a pro! Consider [vim-plug](https://github.com/junegunn/vim-plug), [dein.vim](https://github.com/Shougo/dein.vim), or [minpac](https://github.com/k-takata/minpac).
-
-2. **Add Betty.vim to Your Config:**
-   - For VimScript (`init.vim`):
-     ```vim
-     Plug 'destinedcodes/betty.vim'
-     ```
-   - For Lua (`init.lua`):
-     ```lua
-     use 'destinedcodes/betty.vim'
-     ```
-   Save your configuration and run `:PlugInstall` or the equivalent command for your plugin manager.
+//TODO
 
 ### Manual Installation
 
-1. **Clone the Repository:** Clone this repository into your Neovim configuration directory or any directory of your choice.
-
-2. **Update Your Configuration:**
-   - For VimScript (`init.vim`):
-     ```vim
-     set runtimepath+=path-to-your/betty.vim
-     ```
-   - For Lua (`init.lua`):
-     ```lua
-     vim.cmd('set runtimepath+=path-to-your/betty.vim')
-     ```
-   Replace `path-to-your/betty.vim` with the actual path to your `betty.vim` directory.
+1. **Clone the Repository:** Start by cloning this repository to your local machine using the following command:
+   ```sh
+   git clone https://github.com/destinedcodes/betty.vim.git
+   ```
+   
+2. **Prepare Neovim Directory:**
+   If you don't have a `~/.config/nvim/lua` directory already, create it:
+   ```sh
+   mkdir -p ~/.config/nvim/lua
+   ```
+   
+3. **Copy the betty Lua Directory:**
+   Copy the `lua/betty` directory to your Neovim Lua configuration directory:
+   ```sh
+   cp -r betty.vim/lua/betty ~/.config/nvim/lua/
+   ```
+   
+4. **Require the nvim Plugin:**
+   Add `require("betty")` to your Neovim configuration file `~/.config/nvim/init.lua`:
+   ```lua
+   echo 'require("betty")' >> ~/.config/nvim/init.lua
 
 ## Features
 
